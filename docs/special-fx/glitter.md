@@ -7,10 +7,6 @@ keywords: [glitter, sparkle, voronoi, specular, special fx, effect, fx, poiyomi,
 
 The Glitter feature is a simple effect that adds a voronoi-based sparkle to the color of the mesh. It can be used to add a sparkle to a mesh, or to simulate specular lighting on a glittery surface.
 
-:::info Changes in 9.0
-Glitter / Sparkle received a complete rewrite as of Poiyomi 9.0. Therefore, some features have been changed and reorganized.
-:::
-
 <ReactVideo src='/vid/special-fx/GlitterExample.mp4'/>
 <em>Example of the Glitter effect on this Clothing.</em>
 

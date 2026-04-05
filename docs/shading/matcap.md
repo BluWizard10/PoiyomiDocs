@@ -11,10 +11,6 @@ The word Matcap is a portmanteau of **M**aterial **C**apture. The technique was 
 
 There are a total of 4 Matcap sections (0, 1, 2, 3) available to you, each being independent of each other.
 
-:::info Changes in 9.0
-All features from the deprecated **Iridescence** section has been merged into Matcap as the [Gradient](#gradient) UV Mode. This mode functions the same way as Iridescence.
-:::
-
 <a>
 <img src="/img/shading/PoiMatcapDemo2.png" alt="Poiyomi Matcaps"/>
 </a>
@@ -139,6 +135,12 @@ How much to blend with the Light color.
 - `Type`: <PropertyIcon name="floatrange" />**Float**, Range: `0.0 - 1.0`
 
 How much to blend with the Normals of your Material.
+
+## Hide With Reflection Probe
+
+- `Type`: <PropertyIcon name="toggle" />**Toggle**
+
+If enabled, will only show the Matcap if the World has no reflection probes. This will essentially treat your Matcap as a fallback when there's no reflections in the World.
 
 ## Masking
 

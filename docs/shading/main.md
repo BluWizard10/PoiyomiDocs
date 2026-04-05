@@ -1,12 +1,14 @@
 ---
 sidebar_position: 2
-title: Shading
-description: The Shading section determines the primary base shading of the Material, controlling how the Material reflects light diffuse and how it is affected by other lighting.
-keywords: [shading, diffuse, lighting, base, style, stylized, base pass, add pass, texture ramp, math gradient, multilayer math, wrapped, skin, shademap, flat, realistic, cloth, toon, poiyomi, shader]
+title: Shadows
+description: The Shadows section determines the primary base shading of the Material, controlling how the Material reflects light diffuse and how it is affected by other lighting.
+keywords: [shading, shadows, diffuse, lighting, base, style, stylized, base pass, add pass, texture ramp, math gradient, multilayer math, wrapped, skin, shademap, flat, realistic, cloth, toon, poiyomi, shader]
 toc_max_heading_level: 3
 ---
 
-The **Shading** section defines the base shading of the material. It controls how the material reflects light in a diffuse way, and how it is affected by other lighting. Options in the [Light Data](/shading/light-data.md) section heavily affect how shading is performed.
+The **Shadows** section defines the base shading of the material. It controls how the material reflects light diffuse and how it is affected by other lighting. Options in the [Light Data](/shading/light-data.md) section heavily affect how the overall shading is performed.
+
+This section configures the primary shading style to use on the material, as this section controls how stylized shadows are performed on the mesh.
 
 <a>
 <img src="/img/shading/Shading_All.png" alt="Various Shading Styles on multiple Material Spheres."/>
@@ -17,8 +19,8 @@ The **Shading** section defines the base shading of the material. It controls ho
 :::tip
 This section often uses some terms interchangeably.
 
-- **Lighting** and **Shading** are both talking about how the material is affected by light.
-- Ramp and Gradient are both terms for a 1-dimensional function, using one input and producing one output.
+- **Lighting** and **Shading** are both talking about how the material is affected by light. Both control how **Shadows** appear on the mesh when lighting is occluded.
+- **Ramp** and **Gradient** are both terms for a 1-dimensional function, using one input and producing one output.
 :::
 
 ## Lighting Type
