@@ -11,11 +11,11 @@ It is recommended you utilize your own branches when making changes. Having bran
 
 This Repository is using Docusaurus **Versioning**. This means content in the Docs may be split between different major releases of Poiyomi Shaders. Any Docs pages under `./docs` refer to the latest version, while items under `./versioned_docs` refer to previous versions. **Please refrain from editing pages inside `./versioned_docs` unless absolutely necessary.** It's preferred to prioritize information on the latest version under `./docs` instead.
 
-When creating MDX Links to itself, please ensure that URLs pointing to Docs pages do not come prefixed with `/docs` as to ensure versioning is respected. For example, links should be converted from `/docs/shading/light-data.md` to `/shading/light-data.md` instead.
+When creating MDX Links to itself, please ensure that URLs pointing to Docs pages do not come prefixed with `/docs` as to ensure versioning is respected. For example, links should be converted from `/docs/shading/light-data.mdx` to `/shading/light-data.mdx` instead.
 
 **If something changes that mandates a new versioned docs, please open an Issue and let us know!**
 
-Now, each Documentation page uses the MDX format so that both written content and embedded media can be easily implemented. To learn how to create a Docs page and how they appear on the website itself, read the official documentation [here](https://docusaurus.io/docs/docs-introduction).
+Now, each Documentation page uses the MDX format so that both written content and embedded media can be easily implemented. To ensure usage is compliant, Strict MDX syntax should be used instead of relying on proprietary Docusaurus syntax on top of MDX (to ensure compliance with v4.0). This means any docs page should be using the `.mdx` file extension to ensure full support of MDX. To learn how to create a Docs page and how they appear on the website itself, read the official documentation [here](https://docusaurus.io/docs/docs-introduction).
 
 ## Pages
 
@@ -32,7 +32,7 @@ Creating a Blog Post requires a few things:
 - Your Name and info in the `authors.yml` file, located inside the `/blog` folder. Use currently-added Authors for reference.
 - Must be in Markdown format.
 - The prefix of the document name must be `YYYY-MM-DD-` for the Date of the post (Year, Month, Day).
-  - *Example: `2025-08-30-my-blog-post.md` for the date to be August 30, 2025.*
+  - *Example: `2025-08-30-my-blog-post.mdx` for the date to be August 30, 2025.*
 - A header in the post containing:
   - `slug:` - The URL-friendly name of the page. Optional. If empty, will assume the name of the file as the default.
     - *Note: The slug should be used if the name of the document doesn't follow the recommended prefix above.*
@@ -51,20 +51,6 @@ After you create a named Markdown file in the `/blog` folder and followed the re
 
 In order to follow Markdown compliance, make sure you follow the Basic Syntax guidelines when formatting your text: https://www.markdownguide.org/basic-syntax/.
 
-### Attaching Images
-
-*see [Embedding Media](#embedding-media) for reference.*
-
-If your Blog Post contains images, put your Blog post inside a folder instead! To do this, you will instead create a folder named appropriately (to match the document name) and place your Markdown file inside of it.
-
-Example: `/blog/2025-08-30-my-blog-post/my-blog-post.md`
-
-You can then add an image inside the same folder directory. Add as many images as you need.
-
-To show them in your post, use the Markdown syntax as found here: https://www.markdownguide.org/basic-syntax/#images-1. Since the image will be in the same folder as your post, the path to the image should just be the name of the file itself.
-
-Make sure you specify the Alt text as described in the Markdown syntax. This is important for SEO!
-
 ## Changelogs
 
 There is a sub-blog located under `/changelog`, where patch notes and major update changes should be notated. Unfortunately there is no automation since Docusaurus is static-generated, so changelogs must be published manually.
@@ -72,7 +58,7 @@ There is a sub-blog located under `/changelog`, where patch notes and major upda
 When creating changelogs, please follow the following formatting:
 
 - Name the document with the prefix `YYYY-MM-DD-` for the Date of the post (Year, Month, Day), followed by `poiyomi-toon-` and ending with the version number.
-  - *Example: `2025-09-26-poiyomi-toon-9.2.79-changelog.md`. The date in this example is September 26, 2025.*
+  - *Example: `2025-09-26-poiyomi-toon-9.2.79-changelog.mdx`. The date in this example is September 26, 2025.*
 - Must be in Markdown format.
 - Header should be exactly:
   - `title:` - Should be the name of the shader followed by a version number and ending with "changelog" as the title.
@@ -124,7 +110,33 @@ Example (this is used near the top of the Audio Link Docs page):
 
 ### Attaching Images
 
-You can easily attach images using the Markdown argument `![Alt Text](/img/your-image.png)`. Make sure the source image is sorted under `static/img/`. Otherwise, this may not work.
+You can easily attach images using the Markdown argument `![Alt Text](/img/your-image.png)`. Make sure the source image is sorted under `static/img/` in the repository. Otherwise, this may not work.
+
+### Admonitions
+
+Docusaurus supports admonitions with titles using `:::type My Title` syntax. While this is proprietary Docusaurus syntax, this repository now uses the Markdown Directive syntax for it's reusability.
+
+When making Admonitions, please use the following syntax of `:::type[My Title]`. *Example:*
+
+```md
+:::warning[My Warning Message]
+
+This is a friendly warning Admonition!
+
+:::
+```
+
+### Comments
+
+Previously, MDX v1 supported HTML-style comments. With the introduction of MDX v3 in this repository, please use JSX comment expressions instead. *Example:*
+
+```md
+## Header
+
+{/* Hidden Comment Here */}
+
+Post Content
+```
 
 ### Other Static Assets
 
