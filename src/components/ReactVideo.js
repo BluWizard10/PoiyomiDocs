@@ -38,26 +38,28 @@ export default function ReactVideo({
     };
 
     return (
-        <BrowserOnly fallback={<div style={shellStyle} />}>
-            {() => (
-                <Suspense fallback={<div style={shellStyle}>Loading Video...</div>}>
-                    <ReactPlayer
-                        src={src}
-                        controls={controls}
-                        playing={autoplay}
-                        loop={loop}
-                        muted={resolvedMuted}
-                        style={shellStyle}
-                        // Pass both React DOM and lowercase variants.
-                        // react-player forwards to the underlying <video> when applicable.
-                        {...(forceInline ? { playsInline: true, playsinline: true } : {})}
-                        config={mergedConfig}
-                        {...restProps}
-                    >
-                        {children}
-                    </ReactPlayer>
-                </Suspense>
-            )}
-        </BrowserOnly>
+        <div className="react-video">
+            <BrowserOnly fallback={<div style={shellStyle} />}>
+                {() => (
+                    <Suspense fallback={<div style={shellStyle}>Loading Video...</div>}>
+                        <ReactPlayer
+                            src={src}
+                            controls={controls}
+                            playing={autoplay}
+                            loop={loop}
+                            muted={resolvedMuted}
+                            style={shellStyle}
+                            // Pass both React DOM and lowercase variants.
+                            // react-player forwards to the underlying <video> when applicable.
+                            {...(forceInline ? { playsInline: true, playsinline: true } : {})}
+                            config={mergedConfig}
+                            {...restProps}
+                        >
+                            {children}
+                        </ReactPlayer>
+                    </Suspense>
+                )}
+            </BrowserOnly>
+        </div>
     );
 }
