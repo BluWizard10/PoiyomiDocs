@@ -311,7 +311,7 @@ export default {
         minHeadingLevel: 2,
         maxHeadingLevel: 3,
       },
-      announcementBar: { id: 'vcc-down', backgroundColor: '#f0597a', textColor: '#000000', isCloseable: false, content: '<b>The VCC Repositories for both Toon and Pro versions are temporarily unavailable until further notice. Read the <a href="/blog/2026-04-13-temporary-downtime-faq">Blog Post</a> for more information.</b>' },
+      announcementBar: { id: 'vcc-almost', backgroundColor: '#007a3d', textColor: '#ffffff', isCloseable: false, content: '<b>The Poiyomi Toon VCC Repository is slowly coming back online and is safe to use! Read the <a href="/blog/2026-04-13-temporary-downtime-faq">Blog Post</a> for more information.</b>' },
       navbar: {
         title: "Poiyomi Shaders",
         logo: {
