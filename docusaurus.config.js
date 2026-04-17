@@ -311,7 +311,7 @@ export default {
         minHeadingLevel: 2,
         maxHeadingLevel: 3,
       },
-      // announcementBar: { id: 'alert_critical', backgroundColor: '#ff0033', textColor: '#ffffff', isCloseable: true, content: 'Global Announcement goes here.' },
+      announcementBar: { id: 'vcc-down', backgroundColor: '#f0597a', textColor: '#000000', isCloseable: false, content: '<b>The VCC Repositories for both Toon and Pro versions are temporarily unavailable until further notice. Read the <a href="/blog/2026-04-13-temporary-downtime-faq">Blog Post</a> for more information.</b>' },
       navbar: {
         title: "Poiyomi Shaders",
         logo: {

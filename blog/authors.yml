@@ -60,3 +60,14 @@ sacred:
   socials:
     github: sacred0
     bluesky: sacred0.bsky.social
+
+tony_lewis:
+  name: Tony_Lewis
+  title: Lead Community Helper
+  url: https://github.com/slord399
+  image_url: https://github.com/slord399.png
+  page: true
+  socials:
+    github: slord399
+    bluesky: tony-lewis.slord-hd.com
+    x: slord399
